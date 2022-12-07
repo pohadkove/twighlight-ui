@@ -1,14 +1,36 @@
 <script>
 	export let Color = '';
-	export let Link = '';
+
 	export let Target = '';
-    export let Style ='';
+
+	export let href = null;
 </script>
 
-<a class="{Color} btn" href={Link} target={Target} style="{Style}">
-	<slot />
-</a>
-
+{#if href}
+  <a
+	target={Target}
+    {href}
+  >
+    <button
+	  style
+      class="btn {Color}"
+      on:click
+      on:mouseover
+      on:*
+    >
+      <slot />
+    </button>
+  </a>
+{:else}
+  <button
+  	class="btn {Color}"
+    on:click
+    on:mouseover
+    on:*
+  >
+    <slot />
+  </button>
+{/if}
 <style>
 	.btn {
 		display: inline-flex;
@@ -20,8 +42,11 @@
 		align-items: center;
         border-radius: 9999999px;
         transition-duration: .2s;
+		border:none;
+		cursor:pointer;
+		scale:100%;
 	}
-    .btn:focus{
+    .btn:active{
         scale: 95%;
     }
     .btn:hover{
