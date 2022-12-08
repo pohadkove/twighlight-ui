@@ -1,10 +1,7 @@
-<script lang="ts">
-	export let Color = '';
-
-	export let Target = '';
-
-	export let href: string | null = null;
-  export let rel: string | null = null;
+<script>export let Color = '';
+export let Target = '';
+export let href = null;
+export let rel = null;
 </script>
 
 {#if href}

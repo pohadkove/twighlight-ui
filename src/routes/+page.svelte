@@ -1,10 +1,10 @@
 <script>
 	import Alert from '$lib/Alert.svelte';
 import Avatar from '$lib/Avatar.svelte';
-import Button from '$lib/Button.svelte';
 	import Card from '$lib/Card.svelte';
 	import Fab from '$lib/Fab.svelte';
-	import '$lib/Main.css';
+	
+  import {Button} from '../lib/index'
 </script>
 <main class="elements">
 <Alert Color="primary">
@@ -12,7 +12,7 @@ import Button from '$lib/Button.svelte';
 </Alert>
 <Alert Color="secondary">
   <div style="text-align:center;">
-    <a href="https://sidebar.io/" target="_blank">LINK</a>
+    <a rel="noreferrer" href="https://sidebar.io/" target="_blank">LINK</a>
     <br>
     <br>
     <br>
@@ -22,7 +22,7 @@ import Button from '$lib/Button.svelte';
 <Button Color="primary">Button</Button>
 <Button Color="secondary">Button</Button>
 <Button Color="secondary2">Button</Button>
-<Button href="https://github.com/pohadkove" Target="_blank" Color="accent">Button</Button>
+<Button rel="noreferrer" href="https://github.com/pohadkove" Target="_blank" Color="accent">Button</Button>
 <Fab Color="primary">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>

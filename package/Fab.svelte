@@ -1,22 +1,22 @@
-<script lang="ts">
+<script>
 	export let Color = '';
 
 	export let Target = '';
 
-	export let href: string | null = null;
-  export let rel: string | null = null;
+	export let href = null;
 </script>
 
 {#if href}
   <a
 	target={Target}
     {href}
-    {rel}
   >
     <button
+	  style
       class="btn {Color}"
       on:click
-      on:focus
+      on:mouseover
+      on:*
     >
       <slot />
     </button>
@@ -25,7 +25,8 @@
   <button
   	class="btn {Color}"
     on:click
-    on:focus
+    on:mouseover
+    on:*
   >
     <slot />
   </button>
@@ -33,20 +34,17 @@
 <style>
 	.btn {
 		display: inline-flex;
-		padding-top: 0.5rem;
-		padding-bottom: 0.5rem;
-		padding-left: 1rem;
-		padding-right: 1rem;
+        padding: .80rem;
 		margin-top: 0.5rem;
 		color: var(--btn-font);
 		font-size: 1.125rem;
 		line-height: 1.75rem;
 		align-items: center;
-        border-radius: 2px;
+        border-radius: 9999999px;
         transition-duration: .2s;
-		scale:100%;
 		border:none;
 		cursor:pointer;
+		scale:100%;
 	}
     .btn:active{
         scale: 95%;
