@@ -47,3 +47,6 @@ a:hover{
 .accent-border{
     border-color: var(--body-accent);
 }
+.rounded{
+    border-radius: 999999px !important;
+}

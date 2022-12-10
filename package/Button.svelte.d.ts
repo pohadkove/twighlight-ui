@@ -2,9 +2,10 @@ import { SvelteComponentTyped } from "svelte";
 declare const __propDef: {
     props: {
         Color?: string | undefined;
-        Target?: string | undefined;
+        target?: string | null | undefined;
         href?: string | null | undefined;
         rel?: string | null | undefined;
+        Round?: string | null | undefined;
     };
     events: {
         click: MouseEvent;

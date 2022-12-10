@@ -1,20 +1,21 @@
 <script lang="ts">
 	export let Color = '';
 
-	export let Target = '';
-
+  export let target: string | null = null;
 	export let href: string | null = null;
   export let rel: string | null = null;
+  export let Round: string | null = null;
+
 </script>
 
 {#if href}
   <a
-	target={Target}
+	  {target}
     {href}
     {rel}
   >
     <button
-      class="btn {Color}"
+      class=" btn {Color} {Round}"
       on:click
       on:focus
     >
@@ -23,7 +24,7 @@
   </a>
 {:else}
   <button
-  	class="btn {Color}"
+  	class="btn {Color} {Round}"
     on:click
     on:focus
   >
@@ -31,6 +32,7 @@
   </button>
 {/if}
 <style>
+  
 	.btn {
 		display: inline-flex;
 		padding-top: 0.5rem;
@@ -54,4 +56,5 @@
     .btn:hover{
         opacity: 90%;
     }
+    
 </style>

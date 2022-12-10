@@ -1,22 +1,19 @@
-<script>
-	export let Color = '';
-
-	export let Target = '';
-
-	export let href = null;
+<script>export let Color = '';
+export let target = null;
+export let href = null;
+export let rel = null;
 </script>
 
 {#if href}
   <a
-	target={Target}
+	{target}
     {href}
+    {rel}
   >
     <button
-	  style
       class="btn {Color}"
       on:click
-      on:mouseover
-      on:*
+      on:focus
     >
       <slot />
     </button>
@@ -25,8 +22,7 @@
   <button
   	class="btn {Color}"
     on:click
-    on:mouseover
-    on:*
+    on:focus
   >
     <slot />
   </button>
