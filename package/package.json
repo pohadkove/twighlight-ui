@@ -27,8 +27,8 @@
     "./Button.svelte": "./Button.svelte",
     "./Card.svelte": "./Card.svelte",
     "./Fab.svelte": "./Fab.svelte",
-    ".": "./index.js",
     "./Main.css": "./Main.css",
+    ".": "./index.js",
     "./MaterialVariables.css": "./MaterialVariables.css"
   },
   "svelte": "./index.js"
